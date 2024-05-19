@@ -56,9 +56,8 @@ class TenorResult extends Equatable {
       url: map['url'],
       itemurl: map['itemurl'],
       canShare: canShare,
-      media: TenorGif.fromMap((map['media'] != null &&
-              (map['media'] is List && map['media'].length != 0))
-          ? map['media'][0]
+      media: TenorGif.fromMap((map['media_formats'] != null && map['media_formats'].length != 0)
+          ? map['media_formats']
           : <String, dynamic>{}),
     );
   }
